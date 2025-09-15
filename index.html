@@ -41,4 +41,81 @@
       border-radius:16px; padding:22px 20px; margin-top:18px; box-shadow:var(--shadow);
     }
     section h2{ margin:0 0 10px; font-size:20px; }
-    .chips{ display:flex; flex-w
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .chip{ padding:6px 10px; background:var(--chip); border-radius:999px; font-size:14px; color:var(--muted); border:1px solid rgba(255,255,255,.06); }
+    ul{ margin:10px 0 0 18px; }
+    .grid{ display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card{ padding:14px; border-radius:12px; background:var(--chip); border:1px solid rgba(255,255,255,.06); }
+    .muted{ color:var(--muted); }
+    footer{ text-align:center; color:var(--muted); margin-top:22px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">MSJ</div>
+      <div>
+        <h1>문수제</h1>
+        <div class="tagline">가상화·네트워킹 랩을 즐기는 DevOps 엔지니어 지망생</div>
+        <div class="btns">
+          <a class="btn" href="#" onclick="return false;">이력서(추가 예정)</a>
+          <a class="btn secondary" href="mailto:you@example.com">you@example.com</a>
+          <a class="btn secondary" href="#" onclick="return false;">GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="about">
+      <h2 id="about">소개</h2>
+      <p>
+        안녕하세요, 문수제입니다. KVM/libvirt와 Terraform으로 VM을 자동화하고,
+        VyOS·OPNsense로 SLB/VRRP/방화벽을 구성하는 실습을 좋아합니다. 단단한
+        인프라를 손에 익힌 뒤, CI/CD와 컨테이너 운영으로 영역을 넓히는 게 목표입니다.
+      </p>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">보유 스킬</h2>
+      <div class="chips">
+        <span class="chip">Linux (Rocky)</span>
+        <span class="chip">KVM / libvirt</span>
+        <span class="chip">Terraform</span>
+        <span class="chip">VyOS / OPNsense</span>
+        <span class="chip">HTTPD / Nginx</span>
+        <span class="chip">Docker</span>
+        <span class="chip">DNS / BIND</span>
+        <span class="chip">Git / GitHub</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">프로젝트 하이라이트</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>DMZ 리버스 프록시 & SLB</strong>
+          <p class="muted">VyOS로 VRRP VIP와 라운드로빈 백엔드 운영. 내부 웹 2대 무중단 배포 실험.</p>
+        </div>
+        <div class="card">
+          <strong>내부 DNS & 도메인</strong>
+          <p class="muted">BIND로 내부 존(msj.com) 구성, 게이트웨이 NAT 통해 외부/내부 질의 연동.</p>
+        </div>
+        <div class="card">
+          <strong>IaC 실습</strong>
+          <p class="muted">Terraform(libvirt)로 VM·네트워크 자동화, cloud-init로 사용자/네트워크 부트스트랩.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">연락처</h2>
+      <ul>
+        <li>이메일: <a href="mailto:you@example.com">you@example.com</a></li>
+        <li>GitHub: <a href="#" onclick="return false;">github.com/your-id</a></li>
+      </ul>
+    </section>
+
+    <footer>© <span id="y"></span> Moon Suje — 학습하며 성장합니다.</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

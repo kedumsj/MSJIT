@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>문수제 · 자기소개</title>
+  <style>
+    :root{
+      --bg:#0b1020; --fg:#e7e9ee; --muted:#a8b2c1; --accent:#6aa6ff; --card:#121933;
+      --chip:#1b2447; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7f9fc; --fg:#0f172a; --muted:#475569; --accent:#2563eb; --card:#ffffff; --chip:#eef2ff; }
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, AppleSDGothicNeo, "Noto Sans KR", sans-serif;
+      color:var(--fg); background:radial-gradient(1200px 800px at 10% -10%, rgba(106,166,255,.15), transparent 60%), var(--bg);
+    }
+    .wrap{ max-width:960px; margin:0 auto; padding:32px 20px 64px; }
+    header{
+      display:grid; gap:18px; align-items:center; justify-items:start;
+      grid-template-columns: 90px 1fr; margin-top:12px; margin-bottom:18px;
+    }
+    .avatar{
+      width:90px; height:90px; border-radius:50%; background:var(--card);
+      box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--accent);
+    }
+    h1{ margin:0; font-size:28px; letter-spacing:.2px; }
+    .tagline{ margin-top:4px; color:var(--muted); }
+    .btns{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; color:var(--fg);
+      background:linear-gradient(180deg, var(--accent), #4f7de6); box-shadow:var(--shadow); font-weight:600;
+    }
+    .btn.secondary{
+      background:var(--card); color:var(--fg); border:1px solid rgba(255,255,255,.08);
+    }
+    section{
+      background:var(--card); border:1px solid rgba(255,255,255,.06);
+      border-radius:16px; padding:22px 20px; margin-top:18px; box-shadow:var(--shadow);
+    }
+    section h2{ margin:0 0 10px; font-size:20px; }
+    .chips{ display:flex; flex-w
